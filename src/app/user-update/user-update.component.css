@@ -1,0 +1,22 @@
+.mat-mdc-form-field {
+    margin-left: 5%;
+    margin-top: 50px;
+    font-size: 14px;
+    display: flex;
+justify-content: center;
+align-items: center;
+    width: 90%;
+  }
+  .edit,.delete{
+    margin-left: 10px;
+    color: #343a40;
+    font-size: 14px;
+  }
+  .edit:hover{
+    cursor: pointer;
+   color: #007bff;
+  }
+  .delete:hover{
+    cursor: pointer;
+    color: #dc3545;
+  }

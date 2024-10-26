@@ -1,0 +1,42 @@
+mat-card{
+    margin: 2%;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    border: 1px solid #ccc;
+    
+}
+.mat-mdc-form-field{
+    width: 98%;
+    margin: 1%;
+}
+.text-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-50{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+mat-card-actions button{
+    width: 75%;
+    margin: 1%;
+}
+.signIn{
+    text-align: center;
+    margin: 2%;
+    
+}
+.signIn a{
+    cursor: pointer;
+    color: rgb(206, 76, 33);
+}
+.mat-mdc-raised-button{
+    width:100% ;
+}
+button{
+    margin: 2px;
+}
