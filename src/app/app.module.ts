@@ -11,11 +11,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
-import { ProfileComponent } from './profile/profile.component';
+
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
 import { DialogBodyComponent } from './user-update/dialog-body/dialog-body.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { ProfileComponent } from './profile/profile.component';
+import { CreateHotelComponent } from './admin/create-hotel/create-hotel.component';
+import { UpdateHotelComponent } from './admin/update-hotel/update-hotel.component';
 
 
 
@@ -28,6 +32,8 @@ import { DialogBodyComponent } from './user-update/dialog-body/dialog-body.compo
     ErrorPageComponent,
     UserUpdateComponent,
     DialogBodyComponent,
+    CreateHotelComponent,
+    UpdateHotelComponent,
     
   ],
   imports: [
@@ -35,9 +41,12 @@ import { DialogBodyComponent } from './user-update/dialog-body/dialog-body.compo
     AppRoutingModule,
     ReactiveFormsModule,
     CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     FormsModule,
     HttpClientModule,
     angu_MaterialModule,
+   
   ],
   providers: [
     provideAnimationsAsync(),

@@ -1,7 +1,8 @@
+import { user } from './../dataType';
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {  userUpdate } from '../dataType';
+import {  adminUpdate, userUpdate } from '../dataType';
 
 @Injectable({
   providedIn: 'root',
@@ -18,6 +19,12 @@ export class UserService {
   }
   getUsersCustomes(){
     return this.http.get(this.basicURL+"/user_custom");
+  }
+  delete(id:number){
+    return this.http.delete(this.basicURL+"/user/"+id);
+  }
+  updateByAdmin(user:adminUpdate){
+    return this.http.patch<adminUpdate>(this.basicURL+"/user_custom/"+user.id, user);
   }
   updateUser(user:userUpdate) {
 

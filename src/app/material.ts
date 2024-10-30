@@ -11,6 +11,7 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatSelectModule } from "@angular/material/select";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatSortModule } from "@angular/material/sort";
 import { MatTableModule } from "@angular/material/table";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTooltipModule } from "@angular/material/tooltip";
@@ -33,7 +34,8 @@ import { MatTooltipModule } from "@angular/material/tooltip";
         MatCardModule,
         MatTableModule,
         MatPaginatorModule,
-        MatDialogModule
+        MatDialogModule,
+        MatSortModule
         
         ]
     

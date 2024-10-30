@@ -1,0 +1,20 @@
+mat-card{
+  align-items: center;
+    text-align: center; 
+}
+.mat-mdc-form-field{
+    width: 98%;
+    margin: 1%;
+}
+mat-card-actions  button {
+    margin:2%;
+}
+h4{
+  color: rgb(61, 54, 135);
+}
+
+.cancel:hover{
+    
+background-color: rgb(255, 186, 186) ;
+
+}

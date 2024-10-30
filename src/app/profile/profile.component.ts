@@ -31,8 +31,7 @@ export class ProfileComponent implements OnInit {
       username: [{ value: this.userData?.name, disabled: false }],
       email: [{ value: this.userData?.email_address, disabled: false }],
       password: [{ value: this.userData?.password, disabled: false }],
-      status: [{ value: this.userData?.status, disabled: true }],
-      role: [{ value: this.userData?.role, disabled: true }],
+      
     });
   }
   update() {
@@ -42,8 +41,7 @@ export class ProfileComponent implements OnInit {
         name: this.updateForm.value.username as string,
         email_address: this.updateForm.value.email as string,
         password: this.updateForm.value.password as string,
-        status: this.userData?.status as boolean,
-        role: this.userData?.role as string,
+       
       };
       console.log(_obj);
       this.userService.updateUser(_obj).subscribe(
