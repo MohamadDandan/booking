@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
-
+import { GoogleMapsModule } from "@angular/google-maps";
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
 import { DialogBodyComponent } from './user-update/dialog-body/dialog-body.component';
@@ -20,6 +20,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { ProfileComponent } from './profile/profile.component';
 import { CreateHotelComponent } from './admin/create-hotel/create-hotel.component';
 import { UpdateHotelComponent } from './admin/update-hotel/update-hotel.component';
+import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 
 
@@ -34,9 +36,10 @@ import { UpdateHotelComponent } from './admin/update-hotel/update-hotel.componen
     DialogBodyComponent,
     CreateHotelComponent,
     UpdateHotelComponent,
-    
+        
   ],
   imports: [
+    MatSelectCountryModule.forRoot('en'),
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
@@ -44,11 +47,14 @@ import { UpdateHotelComponent } from './admin/update-hotel/update-hotel.componen
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FormsModule,
+    GoogleMapsModule ,
     HttpClientModule,
     angu_MaterialModule,
    
   ],
   providers: [
+    {provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: { showError: true }},
     provideAnimationsAsync(),
     CookieService
   ],

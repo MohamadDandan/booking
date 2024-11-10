@@ -30,4 +30,5 @@ export class UserService {
 
     return this.http.patch<userUpdate>(this.basicURL+"/user/"+user.id, user);
   }
+  
 }

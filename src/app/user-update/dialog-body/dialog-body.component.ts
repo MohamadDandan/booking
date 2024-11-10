@@ -16,7 +16,7 @@ export class DialogBodyComponent implements OnInit {
   roleValue: any;
   updateForm: any;
   changeDialog=false;
-  userData: userUpdate | undefined;
+  userData: adminUpdate | undefined;
 
   constructor(
     private formBuilder: FormBuilder,
