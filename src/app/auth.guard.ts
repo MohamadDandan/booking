@@ -30,3 +30,13 @@ export const authGuard_Guest: CanActivateFn = (route, state) => {
     return false;
   }
 };
+export const onProcess_hotel: CanActivateFn = (route, state) => {
+  let onProcessHotel_id=localStorage.getItem('getHotelId')
+  let router = inject(Router);
+  if(onProcessHotel_id)
+    return true;
+  else {
+    router.navigate(['/404']);
+    return false;
+  }
+}

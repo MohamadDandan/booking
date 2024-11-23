@@ -1,0 +1,38 @@
+mat-chip-listbox{
+    margin-left: 7%;
+}
+.mat-mdc-form-field{
+    width: 75%;
+    margin: 1%;
+}
+.new{
+    width: fit-content;
+}
+form{
+    width:70% ;
+    margin-right: 15%;
+   
+}
+.input-number {
+    border: none;
+    width: 70px;
+    height: 30px;
+    align-content: center;
+    border-bottom: 1px solid gray;
+    background-color: #E0E2EC
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+.inputStyle[type="number"]{
+    text-align: center;
+}
+p{
+    font-size: large;
+}
+mat-radio-button{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+}

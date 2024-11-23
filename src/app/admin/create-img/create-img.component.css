@@ -1,0 +1,10 @@
+.input_URL{
+    width:70%;
+    align-content: center;
+}
+
+.imgSize{
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+}

@@ -20,4 +20,7 @@ export class ImgService {
   updateImg(data:imgURL_updat){
     return this.http.patch(this.basicURL+"/hotel_picture/"+data.id, data);
   }
+  deleteImg(id:number){
+    return this.http.delete(this.basicURL+"/hotel_picture/"+id);
+  }
 }

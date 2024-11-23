@@ -1,0 +1,186 @@
+
+<mat-stepper  #stepper><!-- linear -->
+  <mat-step [stepControl]="firstRoomForm"  label="Room Details" >
+  
+
+    <form [formGroup]="firstRoomForm" class="container">
+      <h3>Room Detail</h3>
+      <div class="container" style="border: 1px solid rgb(235, 233, 233); margin-bottom: 2rem;">
+      <div class="row">
+       <a>What is the type of the room?</a>
+      <mat-form-field >
+        <mat-label>Type</mat-label>
+        <mat-select matInput formControlName="roomType" >
+          <mat-option *ngFor="let roomTypes of roomType" [value]="roomTypes">
+            {{roomTypes}}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+      <div class="row">
+        <a>How many rooms of this type?</a>
+      <mat-form-field  class="new">
+        <mat-label>Number</mat-label>
+        <input type="number" matInput formControlName="roomNumber"/>
+      </mat-form-field>
+      </div>
+    </div>
+      <div class="container " style="border: 1px solid rgb(232, 232, 232); margin-bottom: 2rem;">
+        <a>What beds are available in room?</a>
+        <div class="row">
+          <div class="col-1">
+            <span class="material-icons" style="font-size: 40px;margin-left: 40%">single_bed</span>
+            
+          </div>
+          <div class="col" style="margin-left: 10px;">
+          
+            <a style="font-size: medium;">Twin bed</a><br>
+            <a style="color: grey; font-size: small;">35-51 inches</a>
+            
+           </div>
+          <div class="col" style="margin-left: 30%">
+            <input 
+              type="number" 
+              matInput 
+              formControlName="twinBed" 
+              min="0" max="10" 
+              class="input-number inputStyle" >
+          
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-1">
+              <span class="material-icons" style="font-size: 40px;margin-left: 40%">bed</span>
+              
+            </div>
+            <div class="col" style="margin-left: 10px;">
+              <a style="font-size: medium;">Full bed</a><br>
+              <a style="color: grey; font-size: small;">52-59 inches</a>
+             </div>
+            <div class="col" style="margin-left: 30%">
+              <input 
+                type="number"
+                matInput 
+                formControlName="fullBed"
+                min="0" max="10" 
+                class="input-number inputStyle">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <span class="material-icons" style="font-size: 40px; margin-left: 40%">king_bed</span>
+              
+            </div>
+            <div class="col" style="margin-left: 10px;">
+              <a style="font-size: medium;">Queen bed</a><br>
+              <a style="color: grey; font-size: small;">60-70 inches</a>
+             </div>
+            <div class="col" style="margin-left: 30%">
+              <input 
+                type="number" 
+                matInput 
+                formControlName="queenBed" 
+                min="0" max="10" 
+                class="input-number inputStyle" >
+            </div>
+          </div>
+      </div>
+     <div class="container"style="border: 1px solid rgb(232, 232, 232); margin-bottom: 2rem;">
+      <div class="row">
+        <a>How many can stay in this room?</a>
+        <mat-form-field  class="new">
+          <mat-label>Number</mat-label>
+          <input type="number" matInput formControlName="maxStay"/>
+        </mat-form-field>
+      </div>
+    <div class="row">
+      <a>how big the room</a>
+      <mat-form-field class="new" >
+        <mat-label>Size in Square meters</mat-label>
+        <input type="number" matInput formControlName="roomSize"/>
+      </mat-form-field>
+    </div>
+     </div>
+     <div class="container"style="border: 1px solid rgb(232, 232, 232); margin-bottom: 2rem;">
+      <div class="row">
+        <a>What is the price of night?</a>
+        <mat-form-field  class="new">
+          <mat-label>price</mat-label>
+          <input type="number" matInput formControlName="price"/>
+        </mat-form-field>
+      </div>
+    
+     </div>
+    <!-- <mat-card-actions>
+      <button
+        type="submit"
+        (click)="create()"
+        mat-raised-button
+        color="primary"
+        
+      >
+        Create
+      </button>
+    </mat-card-actions> -->
+    <div style="right: auto">
+      <button mat-button matStepperNext style="float: right;">Next</button>
+    </div>
+  </form>
+
+  </mat-step>
+  <mat-step [stepControl]="secondRoomForm" label="Bathroom Details">
+
+    <div class="container">
+      <form [formGroup]="secondRoomForm">
+      <h3>Bathroom Details</h3>
+      <p>Is the bathroom Privte?</p>
+      <mat-radio-group aria-label="Is the bathroom privte" formControlName="privateBath">
+        <mat-radio-button value=true>yes</mat-radio-button>
+        <mat-radio-button value=false>no, its shared</mat-radio-button>
+      </mat-radio-group>
+      <mat-divider></mat-divider>
+      <p>What bathroom items are available in this room?</p>
+      <section *ngFor="let Items of bathroomItems" >
+        <p><mat-checkbox formControlName="bathroomItems" (change)="select_bathItem(Items)">{{Items}}</mat-checkbox></p>
+      </section>
+    </form>
+    <div style="float: right;">
+      <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext >Next</button>
+    </div>
+      
+    </div>
+
+  
+  
+  </mat-step>
+
+  <mat-step  >
+
+    <form [formGroup]="thirdRoomForm" class="container">
+      <div class="row">
+        <p>this empty</p>
+      <section *ngFor="let General_Items of General_amenitiesItems" >
+        <p><mat-checkbox formControlName="General_Items" (change)="select_General_Items(General_Items)">{{General_Items}}</mat-checkbox></p>
+      </section>
+      <mat-divider></mat-divider>
+      <p>this empty</p>
+      <section *ngFor="let outdoor_Items of OutdoorsViewsItems" >
+        <p><mat-checkbox formControlName="outdoor_Items" (change)="select_outdoor_Items(outdoor_Items)">{{outdoor_Items}}</mat-checkbox></p>
+      </section>
+      <mat-divider></mat-divider>
+      <p>this empty</p>
+      <section *ngFor="let foodDrink_Items of FoodDrinksItems" >
+        <p><mat-checkbox formControlName="foodDrink_Items" (change)="select_foodDrink_Items(foodDrink_Items)">{{foodDrink_Items}}</mat-checkbox></p>
+      </section>
+      </div>
+
+    </form>
+    <div style="float: right;">
+      
+    
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext (click)="create()">Next</button>
+    </div>
+  </mat-step>
+</mat-stepper>

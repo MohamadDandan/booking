@@ -25,6 +25,7 @@
     "@maptiler/client": "^2.0.0",
     "@maptiler/sdk": "^2.4.1",
     "bootstrap": "^5.3.3",
+    "google-icon": "^1.0.1",
     "ngx-cookie-service": "^18.0.0",
     "ngx-toastr": "^19.0.0",
     "rxjs": "~7.8.0",

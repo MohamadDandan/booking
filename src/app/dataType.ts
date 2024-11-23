@@ -52,10 +52,29 @@ export interface hotel {
   city: string;
   location: GeoPoint;
   hotelservices_id: number[];
- 
+  Check_in_From:string;
+  Check_in_Until:string;
+  Check_out_From:string;
+  Check_out_Until:string;
 }
 
 export interface GeoPoint {
   type: 'point';
   data: { lng: number|undefined; lat: number |undefined};
+}
+export interface room{
+  roomType: string;
+  roomNumber: number;
+  twin_bed: number;
+  full_bed: number;
+  queen_bed: number;
+  roomLimit: number;
+  roomSize: number;
+  price:number;
+  private_bathroom:boolean;
+  items_bathroom:string[];
+  amenities_room:string[];
+  outdoors_room:string[];
+  food_room:string[];
+  hotel_id:number;
 }

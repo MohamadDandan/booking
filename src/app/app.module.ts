@@ -22,6 +22,10 @@ import { CreateHotelComponent } from './admin/create-hotel/create-hotel.componen
 import { UpdateHotelComponent } from './admin/update-hotel/update-hotel.component';
 import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { CreateRoomComponent } from './admin/create-room/create-room.component';
+import { CreateImgComponent } from './admin/create-img/create-img.component';
+import { OnProcessMenuComponent } from './admin/on-process-menu/on-process-menu.component';
+
 
 
 
@@ -36,6 +40,9 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
     DialogBodyComponent,
     CreateHotelComponent,
     UpdateHotelComponent,
+    CreateRoomComponent,
+    CreateImgComponent,
+    OnProcessMenuComponent
         
   ],
   imports: [

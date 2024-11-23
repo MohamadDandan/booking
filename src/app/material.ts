@@ -19,6 +19,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatSelectCountryModule } from "@angular-material-extensions/select-country";
 import { MatStepperModule } from "@angular/material/stepper";
+import { MatRadioModule } from "@angular/material/radio";
+import { MatCheckboxModule } from "@angular/material/checkbox";
 @NgModule({
    
     exports: [
@@ -41,8 +43,9 @@ import { MatStepperModule } from "@angular/material/stepper";
         MatSortModule,
         MatChipsModule,
         MatGridListModule,
-        MatStepperModule
-        
+        MatStepperModule,
+        MatRadioModule,
+        MatCheckboxModule
         
         ]
     
