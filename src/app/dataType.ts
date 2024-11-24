@@ -40,6 +40,7 @@ export interface imgURL_updat {
 export interface pic {
   pic_Name: string;
   pic_URL: string;
+  hotel_id: number;
 }
 
 export interface hotel {
@@ -63,6 +64,23 @@ export interface GeoPoint {
   data: { lng: number|undefined; lat: number |undefined};
 }
 export interface room{
+  roomType: string;
+  roomNumber: number;
+  twin_bed: number;
+  full_bed: number;
+  queen_bed: number;
+  roomLimit: number;
+  roomSize: number;
+  price:number;
+  private_bathroom:boolean;
+  items_bathroom:string[];
+  amenities_room:string[];
+  outdoors_room:string[];
+  food_room:string[];
+  hotel_id:number;
+}
+export interface room_detail{
+  id:number;
   roomType: string;
   roomNumber: number;
   twin_bed: number;

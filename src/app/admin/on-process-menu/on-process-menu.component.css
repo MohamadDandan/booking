@@ -1,0 +1,39 @@
+.container{
+    margin-top: 5%;
+    
+}
+.row{
+    border: 1px solid rgb(207, 206, 206);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 250px;
+    margin-bottom: 2%;
+    background-color:rgb(242, 242, 254);
+}
+.col{
+    
+    width: 30%;
+    height: inherit;
+    
+}
+.img-size{
+   height: 99%;
+   width: 95%;
+}
+a a{
+    color: rgb(10, 113, 27);
+}
+  .example-headers-align{
+    padding: 5%;
+  }
+  .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+  }

@@ -17,6 +17,9 @@ export class ImgService {
   getImg(){
     return this.http.get<pic[]>(this.basicURL+"/hotel_picture");
   }
+  getImgByHotel(hotel_id:string){
+    return this.http.get<imgURL_updat[]>(this.basicURL+"/hotel_picture/"+hotel_id+"/data");
+  }
   updateImg(data:imgURL_updat){
     return this.http.patch(this.basicURL+"/hotel_picture/"+data.id, data);
   }

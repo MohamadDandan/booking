@@ -31,6 +31,7 @@ export class CreateImgComponent {
   }
   saveURL() {
     let name=localStorage.getItem('getHotelName');
+    let id=localStorage.getItem('getHotelId');
     const url = this.thirdFromPhase.value.img_URL
     if (url.length > 0) {
       let _obj: pic = {
@@ -38,6 +39,7 @@ export class CreateImgComponent {
           '_' +
           Math.floor(1 + Math.random() * 900)) as string,
         pic_URL: this.thirdFromPhase.value.img_URL as string,
+        hotel_id: Number(id),
       };
       this.imgURLService.create_IMG(_obj).subscribe((data) => {
         this.toastr.success('Create', 'Success');

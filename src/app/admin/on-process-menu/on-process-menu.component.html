@@ -1,1 +1,120 @@
-<p>on-process-menu works!</p>
+
+<div class="container">
+    <h2>Menu</h2>
+    
+    <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel (opened)="panelOpenState_hotel.set(true)" (closed)="panelOpenState_hotel.set(false)">
+          <mat-expansion-panel-header>
+            <mat-panel-title> Hotel Section </mat-panel-title>
+            <mat-panel-description>
+                {{hotel?.name}}
+               
+                    @if(panelOpenState_hotel()){
+                        <mat-icon>visibility</mat-icon>
+                    }@else{
+                        <mat-icon>visibility_off</mat-icon>
+                    }
+                
+              </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="row" >
+            <div class="col">
+                <img src="https://th.bing.com/th/id/OIP.slB37v8bEMuGIBChMFvFsAAAAA?rs=1&pid=ImgDetMain" alt="image" class="img-size">
+            </div>
+            <div class="col">
+                
+                <mat-list role="list">
+                    <mat-list-item role="listitem">
+                        <a>Country Name : <a>{{hotel?.country}}</a></a>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <a>City Name : <a>{{hotel?.city}}</a></a>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <a>Address : <a>{{hotel?.address}}</a></a>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <a>Description : {{hotel?.Description}}</a>
+                    </mat-list-item>
+                    <mat-list-item role="listitem"  routerLink="/">
+                        <a style="color: rgb(45, 4, 121);"> More Details...</a>
+                    </mat-list-item>
+                  </mat-list>
+            </div>
+        </div>
+        </mat-expansion-panel>
+        </mat-accordion>
+    <mat-accordion class="example-headers-align" multi>
+  
+        <mat-expansion-panel (opened)="panelOpenState_room.set(true)" (closed)="panelOpenState_room.set(false)">
+          <mat-expansion-panel-header>
+            <mat-panel-title> Rooms Setcion </mat-panel-title>
+            <mat-panel-description>
+               <a>Available Options : <a style="color: limegreen;">{{rooms.length}}</a> </a> 
+              @if(panelOpenState_room()){
+                <mat-icon>visibility</mat-icon>
+            }@else{
+                <mat-icon>visibility_off</mat-icon>
+            }
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="row" *ngFor="let room of rooms" >
+            <div class="col">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20220329/pngtree-interior-sketch-or-blueprint-room-construction-furniture-photo-image_26431198.jpg" alt="image" class="img-size">
+            </div>
+            <div class="col">
+                <mat-list role="list">
+                    <mat-list-item role="listitem">
+                        <a>Type of Room : <a>{{room.roomType}}</a></a>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <a>Available Room : <a>{{room.roomNumber}}</a></a>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <a>Limit of guest : <a>{{room.roomLimit}}</a></a>
+                    </mat-list-item>
+                    <mat-list-item role="listitem">
+                        <a>Price of Room : <a>{{room.price}}$</a></a>
+                    </mat-list-item>
+                    <mat-list-item role="listitem"  routerLink="/create-room/{{room.id}}"><a style="color: rgb(45, 4, 121);"> More...</a></mat-list-item>
+                  </mat-list>
+            </div>
+           
+        </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <mat-accordion class="example-headers-align" multi>
+  
+        <mat-expansion-panel (opened)="panelOpenState_img.set(true)" (closed)="panelOpenState_img.set(false)">
+          <mat-expansion-panel-header>
+            <mat-panel-title> Image Setcion </mat-panel-title>
+            <mat-panel-description>
+               <a>Available Images : <a style="color: limegreen;">{{img.length}}</a> </a> 
+              @if(panelOpenState_img()){
+                <mat-icon>visibility</mat-icon>
+            }@else{
+                <mat-icon>visibility_off</mat-icon>
+            }
+            </mat-panel-description>
+            
+          </mat-expansion-panel-header>
+          <div  style="height: fit-content;">
+            <div  >
+                <button mat-raised-button color="primary" routerLink="/create-img" style="float: right;">Add Image</button>
+            </div>
+          </div>
+          <div   class="container">
+            <div class="row" *ngFor="let itemImg of img">
+            <div class="col">
+                <img src="{{itemImg.pic_URL}}" alt="image" class="img-size">
+            </div>
+            <div class="col">
+                Name:<a>{{itemImg.pic_Name}}</a>
+            </div>
+            </div>
+        </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+</div>
+

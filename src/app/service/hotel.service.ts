@@ -14,4 +14,7 @@ export class HotelService {
  createHotel(data:hotel){
   return this.http.post<hotel>(this.basicURL+"/hotel",data);
  }
+ getHotelById(id:string){
+  return this.http.get<hotel>(this.basicURL+"/hotel/"+id);
+ }
 }
