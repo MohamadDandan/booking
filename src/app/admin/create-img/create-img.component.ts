@@ -12,12 +12,13 @@ import { Router } from '@angular/router';
   styleUrl: './create-img.component.css'
 })
 export class CreateImgComponent {
+
   thirdFromPhase: any;
   data: imgURL[] = [];
   array: any[] = [];
   imgData: imgURL_updat | undefined;
   dataSource: any;
-  displayedColumns: string[] = ['pic_URL', 'pic_Name'];
+  displayedColumns: string[] = ['pic_URL', 'pic_Name',"tools"];
 
 
   constructor(private formBuilder: FormBuilder,
@@ -52,6 +53,18 @@ export class CreateImgComponent {
       this.toastr.error('Error',"invalid url")
     }
   }
+  Delete(img: any) {
+    if(img.id){
+      this.imgURLService.deleteImg(img.id).subscribe((data) => {
+        this.dataSource = this.data;
+        this.data = this.data.filter((i) => i.id!== img.id);
+        this.dataSource = [...this.data];
+        this.toastr.info("Img deleted successfully","Delete")
+      });
+    }else{
+      this.toastr.error('Error',"No id found")
+    }
+    }
   retunMenu(){
     this.router.navigate(['/onProcessHotel']);
   }

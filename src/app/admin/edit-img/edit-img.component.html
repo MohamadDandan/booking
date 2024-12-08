@@ -1,14 +1,4 @@
-<form [formGroup]="thirdFromPhase">
-    <mat-form-field class="input_URL">
-      <mat-label>Enter the Url link of the hotel image</mat-label>
-      <input type="text" matInput formControlName="img_URL" />
-      <button matSuffix mat-icon-button (click)="saveURL()">
-        <mat-icon>add</mat-icon>
-      </button>
-    </mat-form-field>
-  </form>
-
-  <div class="mat-elevation-z8">
+<div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
   
    <!--    
@@ -36,7 +26,7 @@
       <ng-container matColumnDef="tools">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Tools </th>
         <td mat-cell *matCellDef="let element"> 
-          <a class="delete" (click)="Delete(element)"><mat-icon>delete</mat-icon> </a>
+          <a class="delete" (click)="Deleter(element)"><mat-icon>delete</mat-icon> </a>
         </td>
       </ng-container> 
   

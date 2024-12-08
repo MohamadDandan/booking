@@ -17,4 +17,10 @@ export class HotelService {
  getHotelById(id:string){
   return this.http.get<hotel>(this.basicURL+"/hotel/"+id);
  }
+ getHotel(){
+  return this.http.get<hotel[]>(this.basicURL+"/hotel");
+ }
+ deleteHotel(id:string){
+  return this.http.delete(this.basicURL+"/hotel/"+id);
+ }
 }

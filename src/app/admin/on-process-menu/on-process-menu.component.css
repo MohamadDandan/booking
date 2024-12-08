@@ -34,6 +34,29 @@ a a{
     
   }
   
+  
   .example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
     margin-left: 8px;
   }
+
+  .containerImg {
+    margin-top: 20px;
+  }
+  
+  .rowImg {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-md-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 10px;
+  }
+  
+  .img-fluid {
+    height: 99%;
+    width: 95%;
+    border-radius: 8px;
+  }
+  

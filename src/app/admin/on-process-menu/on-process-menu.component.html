@@ -99,21 +99,22 @@
             </mat-panel-description>
             
           </mat-expansion-panel-header>
-          <div  style="height: fit-content;">
-            <div  >
+          <div >
+            <div   style="height: fit-content;">
                 <button mat-raised-button color="primary" routerLink="/create-img" style="float: right;">Add Image</button>
+                <button mat-raised-button color="primary" routerLink="/edit-img" style="float: right;">Edit Image</button>
+           
             </div>
           </div>
-          <div   class="container">
-            <div class="row" *ngFor="let itemImg of img">
-            <div class="col">
-                <img src="{{itemImg.pic_URL}}" alt="image" class="img-size">
+          <br>
+          <div class="containerImg">
+            <div class="rowImg">
+              <div class="col-md-4" *ngFor="let image of img; let i = index">
+                <img [src]="image.pic_URL" class="img-fluid" alt="Image" matTooltip="{{image.pic_Name}}">
+              </div>
             </div>
-            <div class="col">
-                Name:<a>{{itemImg.pic_Name}}</a>
-            </div>
-            </div>
-        </div>
+          </div>
+          
         </mat-expansion-panel>
       </mat-accordion>
 </div>

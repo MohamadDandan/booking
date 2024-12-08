@@ -10,6 +10,8 @@ import { CreateHotelComponent } from './admin/create-hotel/create-hotel.componen
 import { CreateRoomComponent } from './admin/create-room/create-room.component';
 import { CreateImgComponent } from './admin/create-img/create-img.component';
 import { OnProcessMenuComponent } from './admin/on-process-menu/on-process-menu.component';
+import { HotelDashboardComponent } from './admin/hotel-dashboard/hotel-dashboard.component';
+import { EditImgComponent } from './admin/edit-img/edit-img.component';
 
 
 const routes: Routes = [
@@ -46,9 +48,18 @@ const routes: Routes = [
   component: CreateImgComponent,
 },
 {
-  path:"onProcessHotel",
+  path:"edit-img",
+  component: EditImgComponent,
+ // canActivate:[onProcess_hotel]
+},
+{
+  path:"onProcessHotel/:id",
   component: OnProcessMenuComponent,
-  canActivate:[onProcess_hotel]
+ // canActivate:[onProcess_hotel]
+},
+{
+  path:"hotelDashboard",
+  component:HotelDashboardComponent
 }
  
 ];
