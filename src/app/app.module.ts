@@ -27,6 +27,7 @@ import { CreateImgComponent } from './admin/create-img/create-img.component';
 import { OnProcessMenuComponent } from './admin/on-process-menu/on-process-menu.component';
 import { EditImgComponent } from './admin/edit-img/edit-img.component';
 import { HotelDashboardComponent } from './admin/hotel-dashboard/hotel-dashboard.component';
+import { DialogBodyDashboardComponent } from './admin/hotel-dashboard/dialog-body-dashboard/dialog-body-dashboard.component';
 
 
 
@@ -46,7 +47,8 @@ import { HotelDashboardComponent } from './admin/hotel-dashboard/hotel-dashboard
     CreateImgComponent,
     OnProcessMenuComponent,
     EditImgComponent,
-    HotelDashboardComponent
+    HotelDashboardComponent,
+    DialogBodyDashboardComponent
         
   ],
   imports: [

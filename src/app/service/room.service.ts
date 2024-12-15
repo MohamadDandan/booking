@@ -17,4 +17,7 @@ basicURL=environment.basicURL
  getRoomsByHotel_Id(id:string){
   return this.http.get<room_detail[]>(this.basicURL+"/rooms/"+id+"/data");
  }
+ deleteRoom(id:number){
+  return this.http.delete(this.basicURL+"/rooms/"+id);
+ }
 }

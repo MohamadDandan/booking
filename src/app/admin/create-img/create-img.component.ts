@@ -66,6 +66,7 @@ export class CreateImgComponent {
     }
     }
   retunMenu(){
-    this.router.navigate(['/onProcessHotel']);
+    let id=localStorage.getItem('getHotelId');
+    this.router.navigate(['/onProcessHotel/'+id]);
   }
 }
